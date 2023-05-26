@@ -86,10 +86,14 @@ function ApplicationForm() {
         <Select placeholder='Status'>
           <Option value='Applied'>Applied</Option>
           <Option value='Interviewing'>Interviewing</Option>
+          <Option value='Offered'>Offered</Option>
           <Option value='Rejected'>Rejected</Option>
         </Select>
       </Form.Item>
-      <Form.Item name='date'>
+      <Form.Item
+        name='date'
+        rules={[{ required: true, message: 'Please select date' }]}
+      >
         <DatePicker placeholder='date' />
       </Form.Item>
       <Form.Item>

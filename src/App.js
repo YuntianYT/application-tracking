@@ -6,6 +6,7 @@ import { getAuth } from 'firebase/auth';
 import Login from './pages/Login';
 import AppLayout from './components/AppLayout';
 import { getFirestore } from 'firebase/firestore';
+import Insight from './pages/Insight';
 
 function App() {
   const app = useFirebaseApp();
@@ -24,7 +25,14 @@ function App() {
               </AppLayout>
             }
           />
-          <Route path='/insight' element={<AppLayout>tables</AppLayout>} />
+          <Route
+            path='/insight'
+            element={
+              <AppLayout>
+                <Insight />
+              </AppLayout>
+            }
+          />
         </Routes>
       </FirestoreProvider>
     </AuthProvider>

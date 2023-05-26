@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useFirestore, useUser } from 'reactfire';
 import { Select } from 'antd';
 import dayjs from 'dayjs';
+import Link from 'antd/es/typography/Link';
 const EditableCell = ({
   editing,
   dataIndex,
@@ -17,6 +18,7 @@ const EditableCell = ({
       <Select>
         <Select.Option value='Applied'>Applied</Select.Option>
         <Select.Option value='Interviewing'>Interviewing</Select.Option>
+        <Select.Option value='Offered'>Offered</Select.Option>
         <Select.Option value='Rejected'>Rejected</Select.Option>
       </Select>
     ) : (
@@ -97,18 +99,26 @@ const ApplicationTable = () => {
       title: 'No.',
       dataIndex: 'num',
       key: 'num',
+      width: '5%',
       editable: false,
     },
     {
       title: 'Company Name',
       dataIndex: 'companyName',
       key: 'companyName',
+      width: '15%',
       editable: true,
     },
     {
       title: 'Link',
       dataIndex: 'link',
       key: 'link',
+      width: '40%',
+      render: (text) => (
+        <Link target='_blank' href={text}>
+          {text}
+        </Link>
+      ),
       editable: true,
     },
     {
@@ -190,7 +200,8 @@ const ApplicationTable = () => {
     };
     const unsubscribe = onSnapshot(docRef, fetchData);
     return () => unsubscribe();
-  }, [docRef]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Form form={form} component={false}>
@@ -202,8 +213,11 @@ const ApplicationTable = () => {
         }}
         dataSource={data}
         columns={mergedColumns}
+        style={{ height: '59vh' }}
         rowClassName='editable-row'
+        scroll={{ y: '50vh' }}
         pagination={{
+          pageSize: 20,
           onChange: cancel,
         }}
       />
