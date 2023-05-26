@@ -34,21 +34,4 @@ The project should now be running on localhost.
 2. **Modern UI Design:** Leveraging the power of Ant Design, this project offers a visually pleasing and intuitive user interface.
 3. **Real-Time Updates:** Firebase integration allows for real-time updates and efficient data management.
 
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](#). Remember to follow the [code of conduct](#).
-
-## License
-
-This project is [MIT](#) licensed.
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- React.js Community
-- Ant Design Team
-- Google Firebase Team
 
