@@ -83,7 +83,7 @@ function ApplicationForm() {
         <Input placeholder='https://job_link' />
       </Form.Item>
       <Form.Item name='status'>
-        <Select placeholder='Status'>
+        <Select style={{ width: '200px' }} placeholder='Status'>
           <Option value='Applied'>Applied</Option>
           <Option value='Interviewing'>Interviewing</Option>
           <Option value='Offered'>Offered</Option>
