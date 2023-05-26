@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Application Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an innovative and responsive project developed with React.js, using the Ant Design UI library and React Google Charts for a dynamic and user-friendly experience. Firebase is used for the backend services, providing a secure and scalable database solution.
+The project has been deployed on vercel, you can visit the website [here](https://application-tracking.vercel.app/)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This project leverages the robustness of React.js, a JavaScript library for building user interfaces, together with the aesthetics and components of Ant Design UI library, providing a seamless and intuitive experience for users.
 
-### `npm start`
+React Google Charts is incorporated to display data in a meaningful and visually appealing manner. Firebase powers the backend, managing data storage and ensuring the app's real-time response.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js:** A JavaScript library for creating user interfaces.
+- **Ant Design:** A design system with values of Nature and Determinacy for better user experience of enterprise applications.
+- **React Google Charts:** A React wrapper for Google Charts.
+- **Firebase:** A comprehensive mobile development platform by Google, offering a wide range of tools and services to help you develop high-quality apps.
 
-### `npm test`
+## Setup and Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project, install it locally using npm:
 
-### `npm run build`
+```
+$ cd ../application-tracking
+$ npm install
+$ npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project should now be running on localhost.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Dynamic Charts:** Powered by React Google Charts, the application displays data in various formats such as line charts, bar charts, and pie charts.
+2. **Modern UI Design:** Leveraging the power of Ant Design, this project offers a visually pleasing and intuitive user interface.
+3. **Real-Time Updates:** Firebase integration allows for real-time updates and efficient data management.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](#). Remember to follow the [code of conduct](#).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is [MIT](#) licensed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Show your support
 
-## Learn More
+Give a ⭐️ if you like this project!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React.js Community
+- Ant Design Team
+- Google Firebase Team
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
