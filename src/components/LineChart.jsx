@@ -23,22 +23,27 @@ const LineChart = ({ data }) => {
   const displayData = getDisplayData(data);
 
   return (
-    <Chart
-      width={'600px'}
-      height={'400px'}
-      chartType='LineChart'
-      loader={<div>Loading Chart</div>}
-      data={displayData}
-      options={{
-        hAxis: {
-          title: 'Date',
-        },
-        vAxis: {
-          title: 'Applications',
-        },
-      }}
-      rootProps={{ 'data-testid': '1' }}
-    />
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Chart
+        width={'600px'}
+        height={'300px'}
+        chartType='LineChart'
+        loader={<div>Loading Chart</div>}
+        data={displayData}
+        options={{
+          title: 'Application Status',
+          titleTextStyle: {
+            fontSize: 20,
+          },
+          hAxis: {
+            title: 'Date',
+          },
+          vAxis: {
+            title: 'Applications',
+          },
+        }}
+      />
+    </div>
   );
 };
 

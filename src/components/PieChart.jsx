@@ -18,16 +18,21 @@ const PieChart = ({ data }) => {
   const statusCounts = getStatusCounts(data);
 
   return (
-    <Chart
-      width={'500px'}
-      height={'300px'}
-      chartType='PieChart'
-      loader={<div>Loading Chart</div>}
-      data={[['Status', 'Count'], ...statusCounts]}
-      options={{
-        title: 'Application Status',
-      }}
-    />
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Chart
+        width={'600px'}
+        height={'300px'}
+        chartType='PieChart'
+        loader={<div>Loading Chart</div>}
+        data={[['Status', 'Count'], ...statusCounts]}
+        options={{
+          title: 'Application Status',
+          titleTextStyle: {
+            fontSize: 20,
+          },
+        }}
+      />
+    </div>
   );
 };
 
