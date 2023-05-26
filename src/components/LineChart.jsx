@@ -31,7 +31,7 @@ const LineChart = ({ data }) => {
         loader={<div>Loading Chart</div>}
         data={displayData}
         options={{
-          title: 'Application Status',
+          title: 'Applications Over Time',
           titleTextStyle: {
             fontSize: 20,
           },
