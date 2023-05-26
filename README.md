@@ -23,7 +23,7 @@ To run this project, install it locally using npm:
 ```
 $ cd ../application-tracking
 $ npm install
-$ npm start
+$ npm run start
 ```
 
 The project should now be running on localhost.
