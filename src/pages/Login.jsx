@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSigninCheck } from 'reactfire';
-import SignIn from '../components/SignIn/SignIn';
+import SignIn from '../components/SignIn';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {

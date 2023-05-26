@@ -1,16 +1,10 @@
 import React from 'react';
-import {
-  TableOutlined,
-  MenuOutlined,
-  HomeOutlined,
-  PlusOutlined,
-} from '@ant-design/icons';
-import { Menu } from 'antd';
+import { HomeOutlined, PieChartOutlined } from '@ant-design/icons';
+import { Card, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import SignOut from '../SignOut/SignOut';
+import SignOut from './SignOut';
 import { useSigninCheck } from 'reactfire';
-import SignIn from '../SignIn/SignIn';
-const { SubMenu } = Menu;
+import SignIn from './SignIn';
 
 function AppLayout({ children }) {
   const { status, data: signInCheckResult } = useSigninCheck();
@@ -27,42 +21,45 @@ function AppLayout({ children }) {
             <Menu
               mode='inline'
               defaultSelectedKeys={['1']}
-              defaultOpenKeys={['sub1']}
-            >
-              <SubMenu key='sub1' icon={<MenuOutlined />} title='Links'>
-                <Menu.Item key='1' icon={<HomeOutlined />}>
-                  <Link to='/'>Home</Link>
-                </Menu.Item>
-                <Menu.Item key='2' icon={<TableOutlined />}>
-                  <Link to='/applications'>Records</Link>
-                </Menu.Item>
-                <Menu.Item key='3' icon={<PlusOutlined />}>
-                  <Link to='/add-application'>Application</Link>
-                </Menu.Item>
-              </SubMenu>
-            </Menu>
+              defaultOpenKeys={['1']}
+              items={[
+                {
+                  key: '1',
+                  icon: <HomeOutlined />,
+                  label: <Link to='/'>Records</Link>,
+                },
+                {
+                  key: '2',
+                  icon: <PieChartOutlined />,
+                  label: <Link to='/insight'>Insight</Link>,
+                },
+              ]}
+            ></Menu>
           </div>
           <div style={{ flex: 1, backgroundColor: '#eee' }}>
             <div
               style={{
-                backgroundColor: 'lightblue',
+                backgroundColor: '#FFF',
                 padding: '10px',
                 display: 'flex',
-                justifyContent: 'end',
+                justifyContent: 'space-between',
                 alignItems: 'center',
+                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
               }}
             >
+              <h3>Application Tracker</h3>
               <SignOut />
             </div>
-            <div
+            <Card
               style={{
                 margin: '2rem',
                 padding: '2rem',
                 backgroundColor: '#fff',
+                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
               }}
             >
               {children}
-            </div>
+            </Card>
           </div>
         </div>
       )}
