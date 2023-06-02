@@ -12,7 +12,6 @@ import { doc, getDoc, onSnapshot, updateDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useFirestore, useUser } from 'reactfire';
 import { Select } from 'antd';
-import dayjs from 'dayjs';
 import Link from 'antd/es/typography/Link';
 import Highlighter from 'react-highlight-words';
 const EditableCell = ({
@@ -155,7 +154,7 @@ const ApplicationTable = () => {
     const row = await form.validateFields();
     const newData = [...data].map((item) => {
       const { num, ...rest } = item;
-      return { ...rest, date: dayjs().format('YYYY-MM-DD') };
+      return { ...rest };
     });
     const index = newData.findIndex((item) => key === item.key);
     if (index > -1) {
